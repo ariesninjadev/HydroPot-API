@@ -1,0 +1,6 @@
+.env
+certificate.crt
+private.key
+
+/node_modules
+/.vscode

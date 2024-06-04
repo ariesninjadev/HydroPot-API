@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NV ADMIN</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, <strong>Aries</strong>.</h1>
+    
+    <div class="content">
+        <p>View stats, update subscriptions and access, add games, or set states from this panel.</p>
+        
+        <br><br>
+        
+        <a href="/admin/users" class="button">Manage Users</a>
+        <a href="/admin/games" class="button">Manage Games</a>
+        <a href="/admin/raw" class="button">Edit Raw</a>
+
+        <hr style="margin-top:40px;margin-bottom:40px;">
+
+        <p>Total Users: <%= c.totalPlayers %></p>
+
+        <p>Total Games: <%= c.totalGames %></p>
+
+        <p>Total Subscriptions: <%= c.totalSubscriptions %></p>
+
+        <p>Total Playtime: <%= c.totalPlaytime %></p>
+
+        <hr style="margin-top:40px;margin-bottom:40px;">
+
+        <a href="/logout" class="button">Logout</a>
+    </div>
+</body>
+</html>
