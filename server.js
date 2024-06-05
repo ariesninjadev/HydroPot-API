@@ -6,6 +6,8 @@ var cors = require("cors");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 
+const PORT = process.env.PORT || 4768;
+
 /* 
   Descriptions of all database functions:
    registerUser: Registers a new user. If the user already exists, return false.
